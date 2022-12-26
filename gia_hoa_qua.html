@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding:5px;
+            margin:5px;
+            font-size:1em;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Giá hoa quả</h2>
+    <input type="text" id="fruit" placeholder="Nhập tên hoa qua để tra giá">
+    <button type="submit" onclick="fruitPriceChecker()">Xem Giá</button>
+    <div id="display"></div>
+    <script>    
+        function fruitPriceChecker(){
+            let fruit = document.getElementById('fruit').value;
+            
+            if (fruit !== ''){
+              
+                switch (fruit){
+                    case 'Ổi':
+                        document.getElementById('display').innerHTML = fruit + " 20000 VND/kg";
+                        break;
+                    case 'Dưa Hấu':
+                        document.getElementById('display').innerHTML = fruit + "20000 VND/kg";
+                        break;
+                    case 'Táo':
+                        document.getElementById('display').innerHTML = fruit + "30000 VND/kg";
+                        break;
+                    case 'Xoài':
+                        document.getElementById('display').innerHTML = fruit + "30000 VND/kg";
+                        break;
+                    case 'Cam':
+                        document.getElementById('display').innerHTML = fruit + "40000 VND/kg";
+                        break;
+                    case 'Chôm Chôm':
+                        document.getElementById('display').innerHTML = fruit + "40000 VND/kg";
+                        break;
+                    case 'Măng Cụt':
+                        document.getElementById('display').innerHTML = fruit + "50000 VND/kg";
+                        break;
+                    default:
+                        document.getElementById('display').innerHTML ="Tôi không biết loại này "
+                }
+            }else{
+                alert('Wrong input');
+            }
+        }
+    </script>
+</body>
+</html>
